@@ -1,6 +1,4 @@
 # Text-File-Compressor
-3rd Semester's DSA Project
-# Description
 
 A C++ implementation of text file compression using Huffman coding algorithm. This project provides functionality for compressing text files, decompressing them back to their original form, and searching for specific character information within files.
 
@@ -129,7 +127,7 @@ Search Options:
 
 - Based on David Huffman's data compression algorithm
 - Inspired by the need for efficient text file compression
-- Developed as part of 3rd Semester DSA project
+- Developed as part of 3rd Semester's DSA project
 
 ## Future Improvements
 
