@@ -130,7 +130,7 @@ Search Options:
 - Developed as part of 3rd Semester's DSA project
 
 ## Links
-- <a href = "https://docs.google.com/document/d/1ogeBs4y4x7eywUmv_PPDCJJaCXY4xHAvTmuCKu_DwGw/edit?usp=sharing">Project Report></a>
+- <a href = "https://docs.google.com/document/d/1ogeBs4y4x7eywUmv_PPDCJJaCXY4xHAvTmuCKu_DwGw/edit?usp=sharing">Project Report</a>
 - <a href = "https://docs.google.com/presentation/d/1Vd9tOkWKgV6LlxFzwZKk70X3TCPGADSu9Zwc-rSKlBU/edit?usp=sharing">Huffman Coding ppt</a>
 
 ## Future Improvements
