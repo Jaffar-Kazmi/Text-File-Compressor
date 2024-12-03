@@ -4,9 +4,7 @@
 #include <queue>
 #include <bitset>
 #include <vector>
-#include <algorithm>
 
-#include <utility> // For std::pair
 using namespace std;
 
 void handle_Compression();
@@ -47,7 +45,6 @@ private:
         int i = low - 1;
         
         for (int j = low; j < high; j++) {
-            // Compare characters (sorting by character value)
             if (arr[j].first <= pivot.first) {
                 i++;
                 swap(arr[i], arr[j]);
@@ -80,11 +77,13 @@ map<char, int> countFrequency(string fileName)
     ifstream file(fileName);  // open file
     map<char, int> frequency; // map to store frequency
     char ch;
+    
     if (!file.is_open())
     {
         cerr << "Error opening file" << endl;
         return frequency; // return frequency if the file could not be opened
     }
+    
     while (file.get(ch))
     { // loop continues as long as it returns a character, terminates at eof
         frequency[ch]++;
@@ -165,7 +164,7 @@ void writeCompressedFile(string outputFile, string compressedData, map<char, str
 
     // Write the Huffman codes (table) to the file
     write << huffmanCodes.size() << endl; // Write the number of codes
-    for (auto pair : huffmanCodes)
+    for (pair<char, string> pair : huffmanCodes)
     {
         write << pair.first << ":" << pair.second << "\n";
     }
@@ -194,10 +193,12 @@ void readCompressedFile(string compressedFile, map<string, char> &huffmanCodes, 
         cerr << "Error in opening " << compressedFile << " file." << endl;
         return;
     }
+
     // Read the total number of codes
     int numofcodes;
     file >> numofcodes;
     file.ignore();
+
     // Read the characters and corresponding codes from the file and store them in a file
     for (int i = 0; i < numofcodes; i++)
     {
@@ -208,6 +209,7 @@ void readCompressedFile(string compressedFile, map<string, char> &huffmanCodes, 
         getline(file, code);
         huffmanCodes[code] = ch;
     }
+    
     // Read binary data from file and convert it into string
     char byte;
     while (file.get(byte))
