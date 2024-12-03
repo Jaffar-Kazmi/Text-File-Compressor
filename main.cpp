@@ -218,6 +218,7 @@ void readCompressedFile(string compressedFile, map<string, char> &huffmanCodes, 
         string toString = bits.to_string();
         binaryData = binaryData + toString;
     }
+    
     file.close();
 }
 
