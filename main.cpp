@@ -218,7 +218,7 @@ void readCompressedFile(string compressedFile, map<string, char> &huffmanCodes, 
         string toString = bits.to_string();
         binaryData = binaryData + toString;
     }
-    
+
     file.close();
 }
 
@@ -457,8 +457,7 @@ void handle_Search()
             // Generate Huffman codes
             map<char, string> huffmanCodes;
             generateHuffmanCodes(root, "", huffmanCodes);
-            // Now search for the character's code
-            string code = findHuffmanCode(huffmanCodes, ch);
+            string code = findHuffmanCode(huffmanCodes, ch);     // Now search for the character's code
             if (!code.empty())
             {
                 cout << "\nHuffman code for character '" << ch << "' is: " << code << endl;
